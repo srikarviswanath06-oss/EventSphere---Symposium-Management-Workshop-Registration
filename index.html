@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>
+      EventSphere — Symposium Management &amp; Workshop Registration
+    </title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section id="auth">
+      <div class="authwrap">
+        <aside class="hero">
+          <div class="brand light"><span class="mk">ES</span>EventSphere</div>
+          <div>
+            <h1>Every symposium and workshop, in one calm place.</h1>
+            <p>
+              Register in a click, get your ticket, track attendance and collect
+              certificates.
+            </p>
+            <ul class="hl">
+              <li>Live seat counts with automatic waitlists</li>
+              <li>Only admin-approved events go public</li>
+              <li>Tickets, check-in desk and certificates</li>
+            </ul>
+          </div>
+          <div class="hero-foot">
+            SRM Easwari Engineering College · CSE (Cyber Security)
+          </div>
+        </aside>
+        <div class="authcol"><div class="card ab" id="authBox"></div></div>
+      </div>
+    </section>
+    <div id="app" class="app hid">
+      <aside class="side" id="side">
+        <div class="brand light" id="bn"></div>
+        <nav id="nav" aria-label="Main"></nav>
+        <div class="sidefoot">
+          <button onclick="theme()" id="b-theme"></button
+          ><button onclick="cycleText()" id="b-text"></button
+          ><button onclick="P.a=!P.a;P.n=false;render()" id="b-api"></button
+          ><button onclick="logout()" id="b-out"></button>
+        </div>
+      </aside>
+      <div class="content">
+        <header class="topbar">
+          <button
+            class="menu"
+            id="menu"
+            onclick="$('#side').classList.toggle('open')"
+            aria-label="Menu"
+          ></button>
+          <h1 id="pt"></h1>
+          <span class="sp"></span
+          ><button
+            class="ib"
+            onclick="P.n=!P.n;P.a=false;render()"
+            id="bell"
+            aria-label="Notifications"
+          ></button>
+          <div class="chip-user" id="who"></div>
+        </header>
+        <main id="main"></main>
+      </div>
+      <div id="pn"></div>
+      <div id="api"></div>
+    </div>
+    <div id="mr"></div>
+    <div id="tr"></div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
